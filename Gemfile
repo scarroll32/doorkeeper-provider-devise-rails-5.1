@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
-#gem 'doorkeeper', :git => '/Users/sean/src/crowdai/doorkeeper/doorkeeper', branch: 'master'
+gem 'doorkeeper', :git => '/Users/sean/src/crowdai/doorkeeper/doorkeeper', :ref => '02a7def25d190140b98e51cecfe3619cd0058907' 
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

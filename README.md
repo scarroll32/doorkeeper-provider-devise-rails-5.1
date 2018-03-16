@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+https://github.com/radar/guides/blob/master/oauth2.md

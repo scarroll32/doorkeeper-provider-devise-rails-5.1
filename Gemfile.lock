@@ -1,7 +1,7 @@
 GIT
   remote: /Users/sean/src/crowdai/doorkeeper/doorkeeper
   revision: 02a7def25d190140b98e51cecfe3619cd0058907
-  branch: master
+  ref: 02a7def25d190140b98e51cecfe3619cd0058907
   specs:
     doorkeeper (4.3.1)
       railties (>= 4.2)
@@ -71,10 +71,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
-    devise (4.4.1)
+    devise (4.4.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
-      railties (>= 4.1.0, < 5.2)
+      railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
     erubi (1.7.1)
@@ -101,7 +101,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
-    nio4r (2.2.0)
+    nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
