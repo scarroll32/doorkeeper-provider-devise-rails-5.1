@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   authenticate :user do
     resources :users
-    resources :items  
+    resources :items
   end
-  root to: "items#index" 
+
+  namespace :api do
+    get 'user', to: 'users#show'
+  end
+  
+  root to: "items#index"
 end
