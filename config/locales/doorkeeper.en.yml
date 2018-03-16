@@ -55,6 +55,9 @@ en:
         confidential: 'Confidential'
         callback_urls: 'Callback urls'
         actions: 'Actions'
+      scopes:
+        public: 'Access your public data.'
+        write: 'Make changes to your profile.'
 
     authorizations:
       buttons:
