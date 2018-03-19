@@ -1,26 +1,36 @@
-# README
+# Doorkeeper OAuth provider app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of a Rails 5.1 app acting as a OAuth provider for other apps. This is the same method that Google, Facebook and Twitter use to provide a "Login with Google" button. This example can be used in conjunction with the [Rails App as a OAuth Consumer](https://github.com/seanfcarroll/doorkeeper-client-rails-5.1).
 
-Things you may want to cover:
+## Setup provider
 
-* Ruby version
+- clone this app
+- bundle install
+- bundle exec rake db:create
+- rails s -p 3000
 
-* System dependencies
+## Setup consumer
 
-* Configuration
+- clone the [client app](https://github.com/seanfcarroll/doorkeeper-client-rails-5.1)
+- bundle install
+- bundle exec rake db:create
+- rails s -p 3001
 
-* Database creation
+## Configure provider
 
-* Database initialization
+- visit http://localhost:3000/oauth/applications
+- Add a new entry "Test"
+- Configure the callback url as ```https://github.com/seanfcarroll/doorkeeper-client-rails-5.1```
 
-* How to run the test suite
+## Access client
 
-* Services (job queues, cache servers, search engines, etc.)
+- visit http://localhost:3001
+- Click the "Authorize via Doorkeeper/Rails" link
+- You will be presesnted with a Standard Devise login page. This is being served by the Provider app. Enter the log in credentials.
+- Once authenticated, you will be presented with the Doorkeeper OAuth authority page (which can be customised), click "Authorize"
+- You will then be redirected back to the authenticated view in the client app
 
-* Deployment instructions
+![auth page](login.png)
 
-* ...
 
-https://github.com/radar/guides/blob/master/oauth2.md
+
