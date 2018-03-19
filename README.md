@@ -20,7 +20,21 @@ This is an example of a Rails 5.1 app acting as a OAuth provider for other apps.
 
 - visit http://localhost:3000/oauth/applications
 - Add a new entry "Test"
-- Configure the callback url as ```https://github.com/seanfcarroll/doorkeeper-client-rails-5.1```
+- Configure the callback url as 
+```http://localhost:3001/oauth/callback```
+
+## Configure client
+
+- Add the OAuth server address, app ID and secret to the client app's environment variables (config/local_env.yml)
+- Set the callback url in the client app's environment variables (needs to be url encoded)
+- Restart the client app
+
+## Authorize client from Provider app
+
+- visit ```http://localhost:3000/oauth/applications```
+- Select 'TEST2'
+- Click the authorize button
+
 
 ## Access client
 
